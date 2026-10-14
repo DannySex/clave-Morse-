@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles.css">
+    <title>Traductor Profesional de Código Morse</title>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1"><i class="fa-solid fa-satellite-dish me-2"></i>Traductor Morse ECMAScript</span>
+        </div>
+    </nav>
+
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <h2 class="text-center mb-4 fw-bold text-primary">Traductor Bidireccional</h2>
+
+                        <!-- Selector de Modo / Botón de Conversión -->
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="btn-group shadow-sm" role="group" aria-label="Tipo de conversión">
+                                <button type="button" id="btnTextToMorse" class="btn btn-primary active px-4 py-2">
+                                    <i class="fa-solid fa-font me-2"></i>Texto a Morse
+                                </button>
+                                <button type="button" id="btnMorseToText" class="btn btn-outline-primary px-4 py-2">
+                                    <i class="fa-solid fa-code me-2"></i>Morse a Texto
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Formulario de Traducción -->
+                        <div class="mb-3">
+                            <label for="inputData" id="labelInput" class="form-label fw-semibold text-secondary">Texto de entrada:</label>
+                            <textarea id="inputData" class="form-control rounded-3" rows="4" placeholder="Escribe tu texto aquí..."></textarea>
+                            <div class="form-text" id="helpText">Ingresa letras, números o signos de puntuación estándar.</div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-4">
+                            <button id="btnClear" class="btn btn-outline-secondary px-4"><i class="fa-solid fa-trash me-2"></i>Limpiar</button>
+                            <button id="btnTranslate" class="btn btn-success px-4 fw-bold"><i class="fa-solid fa-right-left me-2"></i>Traducir</button>
+                        </div>
+
+                        <div class="mb-0">
+                            <label for="outputData" class="form-label fw-semibold text-secondary">Resultado:</label>
+                            <div class="input-group">
+                                <textarea id="outputData" class="form-control rounded-start-3 bg-white" rows="4" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+                                <button class="btn btn-outline-primary" id="btnCopy" title="Copiar al portapapeles">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-3 text-muted border-top bg-white">
+        <small>Desarrollado con Webpack, Babel y JavaScript Moderno (ES6+)</small>
+    </footer>
+
+    <script src="/src/index.js"></script>
+    <script src="/src/morse.js"></script>
+
+</body>
+</html>
